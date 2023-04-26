@@ -23,18 +23,18 @@ git clone https://github.com/seuusuario/InstaBot.git
 cd InstaBot
 ```
 
-3. Edite o arquivo `instabot.py` e configure as variáveis `comments_text` e `profiles` de acordo com suas preferências. Na variável `comments_text` você deve inserir os comentários que deseja fazer, e na variável `profiles` você deve inserir os perfis que deseja comentar.
+3. Edite o arquivo `inbot.py` e configure as variáveis `comments_text` e `profiles` de acordo com suas preferências. Na variável `comments_text` você deve inserir os comentários que deseja fazer, e na variável `profiles` você deve inserir os perfis que deseja comentar.
 
-4. Na função `main_loop`, insira seu usuário e senha nos parâmetros da função `bot.login()`:
+4. Na função `main_loop`, insira seu usuário e senha nos parâmetros da função `start = inbot()`:
 
 ```
-bot.login('seu_usuario', 'sua_senha')
+start = inbot('seu_usuario', 'sua_senha')
 ```
 
 5. Execute o programa através do comando:
 
 ```
-python3 instabot.py
+python3 inbot.py
 ```
 
 O programa irá abrir o navegador automaticamente e fazer login em sua conta do Instagram. Em seguida, irá acessar os perfis configurados na variável `profiles` e fazer comentários nas últimas publicações.
