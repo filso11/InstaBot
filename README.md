@@ -8,6 +8,7 @@ O InstaBot.py é um programa que utiliza a biblioteca Selenium para realizar com
 - Biblioteca Selenium instalada (`pip install selenium`)
 - Biblioteca webdriver_manager instalada (`pip install webdriver_manager`)
 - Biblioteca pyvirtualdisplay instalada (opcional - necessário apenas para execução em servidor Linux, `pip install pyvirtualdisplay`)
+- Você pode instalar as dependencias usando o comando pip install -r requirements.txt
 
 ## Como usar
 
@@ -34,7 +35,7 @@ start = inbot('seu_usuario', 'sua_senha')
 5. Execute o programa através do comando:
 
 ```
-python3 inbot.py
+python3 main.py
 ```
 
 O programa irá abrir o navegador automaticamente e fazer login em sua conta do Instagram. Em seguida, irá acessar os perfis configurados na variável `profiles` e fazer comentários nas últimas publicações.
