@@ -12,11 +12,6 @@ from selenium.webdriver.common.keys import Keys
 # display = Display(visible=0, size=[1920, 1080])
 # display.start()
 
-# Dependencies
-# pyvirtualdisplay
-# selenium
-# webdriver_manager
-
 
 class inbot:
 
@@ -105,37 +100,8 @@ class inbot:
             time.sleep(random.uniform(0.1, 0.5))
 
     def comment(self):
-        comment_text = [
-            'Companheiro Inacio calado é um poeta...',
-            'Este comentário foi taxado pelo Haddad...',
-            'Inacio e sua turma viajando pelo mundo a custo do seu importo...',
-            'Lula leva o brasil a outro patamar... Ladeira a baixo.',
-            'Alguem contrata um tradutor pois o Inacio não compreende português heheheh...',
-            'Janja nas lojas de grife falando mau da classe média brasileira, faz uely...',
-            'Gravata de $200 dolares, isso convertido em reais fica +- 0,35 centavos, ta barato demaaais...',
-            'Do jeito que o Lula viaja devia fazer parte do ministério do turismo...',
-            'Olha o Lula indo... Olha o Lula vindo...',
-            'Lula o povo quer te dar um abraço, vem pra rua...',
-            'Por favor não taxe meu comentario...',
-            'Geraldão só no aquecimento...hahahahah',
-            'Picanha só em 2026... Até lá é só imposto e abóbora...',
-            'Lula reconquistando o respeito mundial... Piada da praça e nossa...',
-            'Lula ta com os parafusos completos?',
-            'Inacio disse que quem tem problemas mentais e porque tem parafuso a menos... como voce é cruel...',
-            'Ei petista vai uma mortadela ai?',
-            'Mês de abril de 2023, recorde de desmatamento na amazonia...',
-            'Próximo projeto do Haddad é taxar o oxigênio...',
-            'Gravata de $200 dolares, picanha que é bom nada... Por enquanto só mortadela...',
-            'Lula como está a tabela do campeonato chines...kkkkkkkk',
-            'Farra dos gastos comendo solta...',
-            'Quem acredita nas narrativas da esquerda é porque tem vida facil...',
-            'Esse comentário foi taxado em 60%',
-            'Qual emissora está transmitindo o campeonato chines?',
-            'Lula grande estadista produtor brasileito, produzindo muita pobreza no pais...',
-            'Recorde de desmatamento, parabens esquerda...',
-            'Taxar tudo que se compra não é apoiar o povo.'
-            'Cade a picanha e a cervejinha?'
-        ]
+        comment_text = ['comment 1', 'comment 2',
+                        'comment 3', 'comment 4', 'comment 5']
         driver = self.driver
         time.sleep(5)
         while True:
@@ -153,7 +119,6 @@ class inbot:
         comment_box = driver.find_element(
             By.CSS_SELECTOR, value="[placeholder='Add a comment…']")
         self.digitando_como_humano(comment_in, comment_box)
-        comment_box.send_keys(self.days_count())
         comment_box.send_keys(Keys.RETURN)
         print(self.timelog() + 'Comentário Ok!')
         time.sleep(5)
@@ -163,24 +128,12 @@ class inbot:
         data_format = now.strftime("%Y-%m-%d %H:%M:%S -- ")
         return data_format
 
-    def days_count(self):
-        today = datetime.datetime.now()
-        firs_day = datetime.datetime(today.year, 1, 1)
-        days = (today - firs_day).days
-        return f" Estamos a {days} dias sem governo..."
 
-
-profiles = ['lulaoficial',
-            'janjalula',
-            'fernandohaddadoficial',
-            'ptbrasil',
-            'planalto',
-            'governodobrasil'
-            ]
+profiles = ['profiles', 'profile1', 'profile2', 'profile3', 'profile4...']
 
 
 def main_loop():
-    start = inbot("ubuntu.lnx", '10Axz!25@@')
+    start = inbot("username", 'password')
     start.login()
     while True:
         for profile in profiles:
@@ -188,7 +141,7 @@ def main_loop():
             start.check_pics()
             start.check_commented()
 
-        start.countdown(300)
+        start.countdown(900)
 
 
 main_loop()
