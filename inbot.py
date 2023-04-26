@@ -94,7 +94,7 @@ class inbot:
             self.comment()
 
     @staticmethod
-    def digitando_como_humano(frase, onde_digitar):
+    def type_like_human(frase, onde_digitar):
         for letra in frase:
             onde_digitar.send_keys(letra)
             time.sleep(random.uniform(0.1, 0.5))
@@ -118,7 +118,7 @@ class inbot:
             By.CSS_SELECTOR, value="[placeholder='Add a comment…']").click()
         comment_box = driver.find_element(
             By.CSS_SELECTOR, value="[placeholder='Add a comment…']")
-        self.digitando_como_humano(comment_in, comment_box)
+        self.type_like_human(comment_in, comment_box)
         comment_box.send_keys(Keys.RETURN)
         print(self.timelog() + 'Comentário Ok!')
         time.sleep(5)
