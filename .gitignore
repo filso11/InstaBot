@@ -1,4 +1,5 @@
 venv
 inbot.py
 .gitignore
+.vscode
 
