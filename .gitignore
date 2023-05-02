@@ -1,5 +1,2 @@
-venv
-inbot.py
-.gitignore
-.vscode
-bateria.py
+/.venv/*
+/teste/
